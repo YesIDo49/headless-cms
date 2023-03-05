@@ -1,0 +1,110 @@
+.btn{
+  width: max-content;
+  display: inline-block;
+  color: $color-secondary;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid $color-secondary;
+  transition: $transition;
+
+  &:hover{
+    color: $shade-light;
+    background-color: $color-secondary;
+  }
+}
+
+.btn-primary{
+  background-color: $color-primary;
+  color: $shade-light;
+  width: max-content;
+  display: inline-block;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid $color-primary;
+  transition: $transition;
+
+  &:hover{
+    color: $color-primary;
+    background-color: transparent;
+  }
+}
+
+/*Scroll down*/
+
+.scroll__down{
+  position: absolute;
+  right: -10vw;
+  bottom: 6rem;
+  transform: rotate(90deg) !important;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.cta{
+
+  .btn, .btn-primary{
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .btn{
+
+    path{
+      stroke: $color-secondary;
+      transition: $transition;
+      fill: $color-secondary-lighter;
+    }
+
+    &:hover{
+      path{
+        stroke: $shade-light;
+        fill: $color-secondary-darker;
+      }
+    }
+  }
+
+}
+
+.filter{
+  width: 80%;
+  margin: 2rem auto;
+  h3{
+    color: $color-primary;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+  }
+
+  &__list{
+    display: flex;
+    gap: 1rem;
+  }
+  .btn-primary{
+    min-width: 6rem;
+  }
+
+  .btn{
+    background-color: transparent;
+    text-transform: capitalize;
+    min-width: 6rem;
+
+    &:hover{
+      color: $color-secondary;
+    }
+  }
+
+  .active{
+    background-color: $color-secondary;
+    border: 1px solid $color-secondary;
+    color: #0b1315;
+
+    &:hover{
+      color: #0b1315;
+    }
+  }
+
+}

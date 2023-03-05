@@ -1,0 +1,238 @@
+/***Project***/
+
+.portfolio__container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  width: 80%;
+  padding-bottom: 3rem !important;
+}
+
+.portfolio__item{
+  //display: grid;
+  //grid-template-rows: 1fr 0.5fr 0.5fr;
+  background: $color-primary-dark;
+  padding: 1.2rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: $transition;
+  color: $shade-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //&:hover{
+  //  border-color: $color-primary-dark;
+  //  background: transparent;
+  //  color: $shade-dark;
+  //}
+
+  &-image{
+    overflow: hidden;
+    grid-row: 1;
+    //place-items: center;
+
+    img{
+      border-radius: 1.2rem;
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+
+  &-desc{
+    grid-row: 2;
+    place-items: center;
+  }
+
+  &-cta{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    grid-row: 3;
+    place-items: end;
+  }
+
+  &-language{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+
+    .language__list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.1rem;
+
+      h6{
+        position: relative;
+
+        &:after{
+          content: " |";
+        }
+      }
+    }
+  }
+
+  h3{
+    margin: 1.2rem 0 1rem;
+  }
+  p{
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+
+
+}
+
+.swiper-slide {
+
+  overflow: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio__container{
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    width: 90%;
+    padding: 0 3rem 3rem 3rem !important;
+
+    //.portfolio__item {
+    //  grid-template-rows: 0.75fr 0.5fr 0.5fr;
+    //
+    //}
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio__container{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+
+    .portfolio__item {
+
+      .btn, .btn-primary{
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+      }
+
+      &-cta{
+        gap: 0.75rem;
+      }
+    }
+
+    }
+}
+
+.project{
+
+  &__info{
+    &__header{
+      height: 70vh;
+      width: 100vw;
+
+      .project-img{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: brightness(0.4);
+        }
+        .test{
+          position: absolute;
+          text-align: center;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        h1{
+          color: $color-primary;
+          font-size: 4.5vw;
+
+        }
+      }
+
+
+    }
+
+    &__links{
+      margin: 2rem auto;
+      width: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    &__details{
+      margin: 3rem auto;
+      width: 70%;
+
+      p{
+        font-size: 1.6rem;
+        text-align: center;
+        color: $color-primary-dark;
+      }
+    }
+
+    &__language{
+      margin: 4rem auto;
+      width: 70%;
+
+      h2{
+        font-size: 2.3rem;
+        text-align: center;
+        color: $color-primary-dark;
+        margin: 2rem 0;
+        text-decoration: underline;
+      }
+
+
+
+      .list-lang{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 3rem;
+
+
+
+        .language-card{
+          background: $color-primary-dark;
+          padding: 1.2rem;
+          border-radius: 2rem;
+          border: 1px solid transparent;
+          transition: $transition;
+          color: $shade-light;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 9rem;
+          min-height: 10rem;
+
+          &-image{
+            overflow: hidden;
+            grid-row: 1;
+            //place-items: center;
+            width: 100%;
+            img{
+              border-radius: 1.2rem;
+              object-fit: contain;
+              width: 100%;
+            }
+          }
+
+          &-desc{
+            grid-row: 2;
+            place-items: center;
+            text-align: center;
+          }
+        }
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,100 @@
+.dark-content {
+  background: $body-background-dark-4;
+
+  .subtitle-dark{
+    transition: all 0.4s ease;
+    //text-shadow: 1px 0px 4px $color-primary, 2px 0px 4px $color-primary, 3px 0px 4px $color-primary, 2px 0px 3px #252525, 2px 3px 15px #252525, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #252525, 40px 0vw 200px #252525;
+    color: $color-primary;
+    font-family: ht-neon;
+  }
+
+  .flicker {
+    transition: all 0.4s ease;
+    //text-shadow: 1px 0px 4px $color-primary, 2px 0px 4px $color-primary, 3px 0px 4px $color-primary, 2px 0px 3px #252525, 2px 3px 15px #252525, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #252525, 40px 0vw 200px #252525;
+    color: $color-primary;
+    //font-family: ht-neon;
+    //-webkit-text-stroke: 0.1px #23796AFF;
+    //font-weight: 900;
+  }
+
+  .flicker-long {
+    transition: all 0.4s ease;
+    //text-shadow: 1px 0px 4px $color-primary, 2px 0px 4px $color-primary, 3px 0px 4px $color-primary, 2px 0px 3px #252525, 2px 3px 15px #252525, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #252525, 40px 0vw 200px #252525;
+    //animation: flicker2 6s linear infinite;
+    color: $color-primary;
+    //font-family: ht-neon;
+    //-webkit-text-stroke: 0.1px #23796AFF;
+    //font-weight: 900;
+  }
+
+  .flicker-fast {
+    transition: all 0.4s ease;
+    //text-shadow: 1px 0px 4px $color-primary, 2px 0px 4px $color-primary, 3px 0px 4px $color-primary, 2px 0px 3px #252525, 2px 3px 15px #252525, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #252525, 40px 0vw 200px #252525;
+    //animation: flicker2 2s linear infinite;
+    color: $color-primary;
+    //font-family: ht-neon;
+    //-webkit-text-stroke: 0.1px #23796AFF;
+    //font-weight: 900;
+  }
+
+  .section{
+
+    &__title{
+      h5{
+        color: $color-primary !important;
+        font-family: ht-neon;
+      }
+    }
+
+    .about__content p {
+      color: $color-primary;
+
+    }
+  }
+}
+
+.dark-mode{
+  width: 5rem;
+  height: auto;
+  cursor: pointer;
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  z-index: 100;
+}
+
+
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes flicker2 {
+  0%, 10%, 10.2%, 20%, 20.6%, 30%, 30.6%, 45%, 55.1%, 57%, 60.1%, 65%, 75.1%, 77%, 85.1%, 86% {
+    opacity: 0.4;
+  }
+  10.1%, 20.1%, 30.1%, 30.5%, 45.1%, 50%, 55%, 57.1%, 60%, 65.1%, 75%, 77.1%, 85%, 86.1%, 100%  {
+    opacity: 0.99;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .dark-mode{
+    width: 4.5rem;
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .dark-mode{
+    width: 4rem;
+    right: 2%;
+    top: 2%;
+  }
+}

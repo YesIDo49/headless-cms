@@ -1,0 +1,183 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body{
+  //background: #031514;
+  //background: #120C02;
+  background: #D8E9E2;
+  color: $shade-dark;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+  transition: all 0.4s ease;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.section{
+  min-height: 80vh;
+  &__title{
+    text-align: center;
+    margin: 2rem auto;
+    h2{
+      color: $color-primary;
+      //font-size: 2rem;
+    }
+    h5{
+      color: $color-primary-dark !important;
+      //font-size: 0.9rem;
+    }
+  }
+}
+
+.container{
+  width: $width-lg;
+  margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5{
+  font-weight: 500;
+}
+
+h1{
+  font-size: 3.5rem;
+}
+
+h2{
+  font-size: 2.2rem;
+}
+
+.section{
+  margin-top: 8rem;
+
+  h2{
+    text-align: center;
+    color: $color-primary;
+    margin-bottom: 3rem;
+  }
+  h5{
+    text-align: center;
+    color: $color-secondary;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.text-light{
+  color: $color-secondary;
+  width: 35rem;
+  margin: auto;
+  height: 6rem;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Old versions of Firefox */
+  user-select: none;
+}
+
+.present-text{
+  cursor: pointer;
+  transition: $transition;
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient($color-secondary-light, $color-secondary-light);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 5px;
+
+  &:hover{
+    color: $color-secondary-light;
+    background-size: 100% 3px;
+    background-position: 0 100%;
+    padding-bottom: 5px;
+
+  }
+}
+
+.link-text{
+  cursor: pointer;
+  transition: $transition;
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient($color-secondary-light, $color-secondary-light);
+  background-size: 0 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 4px;
+
+  &:hover{
+    color: $color-secondary-light;
+    background-size: 100% 2px;
+    background-position: 0 100%;
+    padding-bottom: 4px;
+
+  }
+}
+
+.link-underline{
+  cursor: pointer;
+  transition: $transition;
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient($color-primary-light, $color-primary-light);
+  background-size: 0 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 4px;
+
+  &:hover{
+    background-size: 100% 2px;
+    background-position: 0 100%;
+    padding-bottom: 4px;
+
+  }
+}
+
+a{
+  color: $color-secondary;
+  transition: $transition;
+
+  &:hover{
+    color: $color-secondary-light;
+  }
+}
+
+.section {
+  &__title {
+    h5, h2 {
+      transition: all 0.4s ease;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container{
+    width: $width-md;
+  }
+
+  .section{
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container{
+    width: $width-sm;
+  }
+
+  .section{
+    h2{
+      margin-bottom: 2rem;
+    }
+  }
+
+  .text-light {
+    width: auto;
+  }
+}

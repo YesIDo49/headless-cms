@@ -1,0 +1,112 @@
+/***Header***/
+
+.header{
+  height: 100vh;
+  //padding-top: 2rem;
+  overflow: hidden;
+
+  &__container{
+    text-align: center;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+
+.cta{
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.header__socials{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+
+  a{
+    opacity: 0;
+  }
+
+  &::after{
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: $color-secondary;
+  }
+
+  svg{
+    path{
+      stroke: $color-secondary;
+    }
+  }
+}
+
+.me{
+  background: linear-gradient($color-primary, transparent);
+  width: 22rem;
+  height: 30rem;
+  position: relative;
+  //left: calc(50% - 11rem);
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  margin-top: 2rem;
+  .pic{
+    display: block;
+    width: 90%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .header{
+    height: 95vh;
+    padding-top: 3rem;
+
+    &__container{
+      display: block;
+    }
+
+    .me {
+      position: absolute;
+      left: calc(50% - 11rem);
+
+      .pic {
+        position: inherit;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header{
+    height: 100vh;
+
+    h1{
+      font-size: 2.1rem;
+    }
+    h2{
+      font-size: 1.3rem;
+    }
+
+
+  }
+
+  .header__socials, .scroll__down{
+    display: none;
+  }
+}
